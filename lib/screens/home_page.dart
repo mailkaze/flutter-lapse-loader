@@ -14,8 +14,8 @@ class _HomePage extends State<HomePage> {
 
   @override
   void initState() {
-    dateInputStart.text = "2007-10-26"; //set the initial value of text field
-    dateInputEnd.text = "2022-10-26"; //set the initial value of text field
+    dateInputStart.text = "2007-10-27"; //set the initial value of text field
+    dateInputEnd.text = "2022-10-27"; //set the initial value of text field
     super.initState();
   }
 

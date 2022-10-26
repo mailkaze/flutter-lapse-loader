@@ -10,6 +10,12 @@ class ResultsScreen extends StatelessWidget {
 
     DateTime startDate = DateTime.parse(lapseData['startDate']);
     DateTime endDate = DateTime.parse(lapseData['endDate']);
+    DateTime today = DateTime.now();
+    Duration lapse = endDate.difference(startDate);
+    Duration progress = today.difference(startDate);
+    print('lapse: ${lapse.inDays} dias');
+    print('progress: ${progress.inDays} dias');
+    print('rest: ${(lapse - progress).inDays} días');
 
     return Scaffold(
       appBar: AppBar(
@@ -22,15 +28,15 @@ class ResultsScreen extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              lapseData['startDate'],
+              'lapse: ${lapse.inDays} dias',
               style: const TextStyle(fontSize: 20),
             ),
             Text(
-              lapseData['endDate'],
+              'progress: ${progress.inDays} dias',
               style: const TextStyle(fontSize: 20),
             ),
             Text(
-              lapseData['lapse'],
+              'rest: ${(lapse - progress).inDays} días',
               style: const TextStyle(fontSize: 20),
             ),
           ],
